@@ -3,90 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syoping(쇼핑) - Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            color: white;
-        }
-        /* Video background */
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        /* Blurred login container */
-        .login-container {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 12px;
-            width: 350px;
-            text-align: center;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-        .login-container h2 {
-            color: #fff;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-            font-size: 16px;
-        }
-        .login-container button {
-            width: 100%;
-            background-color: #007bff;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .login-container button:hover {
-            background-color: #0056b3;
-        }
-        .login-container a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .login-container a:hover {
-            text-decoration: underline;
-        }
-        .login-options {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
-        }
-        .login-container p {
-            margin: 15px 0 0;
-            color: #fff;
-        }
-    </style>
+    <title>Syoping(쇼핑) - Customer Login</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -100,10 +18,29 @@
 <div class="login-container">
     <h2>Syoping(쇼핑) - Login</h2>
     <form>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+        <input type="text" placeholder="Username/E-mail/Phone Number" required>
+
+        <div class="input-wrapper">
+            <input type="password" placeholder="Password" required id="password">
+            <span class="toggle-password" id="togglePassword">&#128065;</span> <!-- Initial eye icon -->
+        </div>
+
+        <!-- Remember Me checkbox -->
+        <div class="remember-me">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+        </div>
+
         <button type="submit">Login</button>
     </form>
+
+    <div class="social-login">
+        <p>Or continue with:</p>
+        <a href="/auth/google" class="social-link google"><img src="Video/google.png" alt="Google Login"></a>
+        <a href="/auth/facebook" class="social-link facebook"><img src="Video/facebook.png" alt="Facebook Login"></a>
+        <a href="/auth/wechat" class="social-link wechat"><img src="Video/wechat.png" alt="WeChat Login"></a>
+        <a href="/auth/qq" class="social-link qq"><img src="Video/qq.png" alt="QQ Login"></a>
+    </div>
 
     <div class="login-options">
         <a href="#">Forgot Password?</a>

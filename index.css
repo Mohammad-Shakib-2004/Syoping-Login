@@ -1,10 +1,8 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
@@ -12,11 +10,8 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: #000;
     color: white;
 }
-
-/* Video background */
 .background-video {
     position: fixed;
     top: 0;
@@ -25,83 +20,136 @@ body, html {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(70%);
 }
-
-/* Blurred login container */
 .login-container {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     padding: 40px;
     border-radius: 12px;
-    width: 90%;
-    max-width: 400px;
+    width: 350px;
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    margin: 0 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 .login-container h2 {
-    color: #FFD700;
+    color: #fff;
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 24px;
 }
-
 .login-container input[type="text"],
 .login-container input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 8px 0;
     border: none;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8);
     color: #333;
-    font-size: 1rem;
-    transition: box-shadow 0.3s ease;
+    font-size: 16px;
 }
-
-.login-container input[type="text"]:focus,
-.login-container input[type="password"]:focus {
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
-}
-
 .login-container button {
     width: 100%;
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background-color: #007bff;
     color: white;
     padding: 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s ease;
+    margin-top: 10px;
 }
-
 .login-container button:hover {
-    background: linear-gradient(135deg, #0056b3, #004080);
+    background-color: #0056b3;
 }
-
 .login-container a {
-    color: #FFD700;
+    color: #007bff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
-
 .login-container a:hover {
     text-decoration: underline;
 }
-
 .login-options {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    color: #FFD700;
+    margin-top: 15px;
+}
+.login-container p {
+    margin: 15px 0 0;
+    color: #fff;
+}
+/* Social login buttons */
+.social-login {
+    margin: 15px 0;
+}
+.social-login p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
 }
 
-.login-container p {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #FFD700;
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+
+
+
+/* Social login images*/
+.social-login {
+    margin: 15px 0;
+    text-align: center;
+}
+.social-login p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.social-link {
+    margin: 0 10px;
+}
+.social-link img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.social-link img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding-right: 30px; /* Space for the toggle icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #007bff;
 }
