@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInfo = document.createElement('small');
     usernameInfo.id = "username-info";
     passwordInfo.id = "password-info";
-    usernameInfo.textContent = "Username (3-25 characters)";
-    passwordInfo.textContent = "Password (6-20 characters)";
+    usernameInfo.textContent = "Username (6-25 characters)";
+    passwordInfo.textContent = "Password (6-30 characters)";
     usernameInput.parentNode.insertBefore(usernameInfo, usernameInput.nextSibling);
     passwordInput.parentNode.insertBefore(passwordInfo, passwordInput.nextSibling);
 
