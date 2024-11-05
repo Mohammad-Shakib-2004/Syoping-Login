@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form.appendChild(validationMessage);
 
     // Input configuration
-    usernameInput.setAttribute('maxlength', '15');
-    usernameInput.setAttribute('minlength', '3');
-    passwordInput.setAttribute('maxlength', '20');
+    usernameInput.setAttribute('maxlength', '25');
+    usernameInput.setAttribute('minlength', '6');
+    passwordInput.setAttribute('maxlength', '30');
     passwordInput.setAttribute('minlength', '6');
     usernameInput.setAttribute('aria-describedby', 'username-info');
     passwordInput.setAttribute('aria-describedby', 'password-info');
