@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.appendChild(validationMessage);
 
     // Input configuration
-    usernameInput.setAttribute('maxlength', '25');
+    usernameInput.setAttribute('maxlength', '35');
     usernameInput.setAttribute('minlength', '6');
     passwordInput.setAttribute('maxlength', '30');
     passwordInput.setAttribute('minlength', '6');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInfo = document.createElement('small');
     usernameInfo.id = "username-info";
     passwordInfo.id = "password-info";
-    usernameInfo.textContent = "Username (6-25 characters)";
+    usernameInfo.textContent = "Username (6-35 characters)";
     passwordInfo.textContent = "Password (6-30 characters)";
     usernameInput.parentNode.insertBefore(usernameInfo, usernameInput.nextSibling);
     passwordInput.parentNode.insertBefore(passwordInfo, passwordInput.nextSibling);
